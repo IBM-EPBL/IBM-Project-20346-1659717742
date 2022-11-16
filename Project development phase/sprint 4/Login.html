@@ -1,0 +1,29 @@
+<%-include('header')-%>
+<body>
+ <div class="text-center center-div" id="login">
+     <div class="container w-25 border py-5">
+         <div class="title pb-5">
+             <h2 class="font-weight-bold">Food Demand Forecaster</h2>
+             <h4>Login</h4>
+             <% if(locals.logout){%>
+                 <div class="alert alert-success text-center">
+                     <%=logout%>
+                 </div>
+        <%}%>
+         </div>
+         <form action="/login" method="POST">
+         <div class="form-group">
+             <input type="email" class="form-contol" placeholder="email" name="email">
+             <small class="form-text  text-left">email address</small>
+         </div>
+         <div class="form-group">
+             <input type="password" class="form-contol" placeholder="password" name="password">
+             <small class="form-text text-left">Enter password</small>
+         </div>
+         <button type="submit" class="btn btn-success btn-rounded">Login</button>
+         </form>
+
+     </div>
+ </div>
+ </body>
+ <%-include('footer')-%>
